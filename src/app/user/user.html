@@ -1,1 +1,15 @@
+<!-- Lira: add navigation for user -->
+<ul>
+  <li>Ferries</li>
+  <li>Help Center</li>
+
+   @if (!isLoggedIn) {
+    <li>Login</li>
+    <li>Register</li>
+   } @else {
+    <!-- pag nag login si user eto na dapat makikita -->
+    <li>My Account</li>
+   }
+</ul>
+<button (click)="onLogin()">Emulate Login</button>
 <router-outlet />

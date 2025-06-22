@@ -8,5 +8,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './user.css'
 })
 export class User {
+  isLoggedIn = false
 
+  onLogin() {
+    this.isLoggedIn = !this.isLoggedIn
+  }
 }
