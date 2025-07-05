@@ -9,6 +9,7 @@ export const ADMIN_ROUTES: Routes = [
       { path: '', redirectTo: '/admin/login', pathMatch: 'full' },
       { path: 'login', loadComponent: () => import('./login-admin/login-admin').then(m => m.LoginAdmin) },
       { path: 'dashboard', loadComponent: () => import('./dashboard/dashboard').then(m => m.Dashboard) },
+      { path: 'routes', loadComponent: () => import('./routes/routes').then(m => m.Routes) }
     ]
   }
 ]
