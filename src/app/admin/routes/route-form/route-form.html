@@ -1,0 +1,24 @@
+@if (isSubmit) {
+  <p>Saving...</p>
+}
+<form [formGroup]="rxform" (ngSubmit)="onSubmit()">
+  <label for="id">ID </label>
+  <input type="text" name="id" type="number" formControlName="id"> <br>
+
+  <label for="destination">destination </label>
+  <input formControlName="destination" name="destination"> <br>
+  <label for="routeCode">routeCode </label>
+  <input formControlName="routeCode" name="routeCode"> <br>
+  <label for="origin">origin </label>
+  <input formControlName="origin" name="origin"> <br>
+  <label for="distanceKM">distanceKM </label>
+  <input formControlName="distanceKM" type="number" name="distanceKM"> <br>
+  <label for="durationHours">durationHours </label>
+  <input formControlName="durationHours" type="number" name="durationHours"> <br>
+  <input formControlName="isActive" type="radio" name="isActive" id="isActive1" [value]="true">
+  <label for="isActive1">Active</label> <br>
+  <input formControlName="isActive" type="radio" name="isActive" id="isActive2" [value]="false">
+  <label for="isActive2">Inactive</label> <br>
+
+  <button [disabled]="isSubmit">Save</button>
+</form>

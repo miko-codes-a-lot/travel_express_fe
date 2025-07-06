@@ -1,0 +1,14 @@
+@if (isLoading) {
+  <p>
+    Fetching...
+  </p>
+}
+
+<h1>Edit</h1>
+@if (doc) {
+  <app-route-form
+    [isSubmit]="isLoading"
+    [route]="doc"
+    (onSave)="onSubmit($event)"
+  ></app-route-form>
+}

@@ -1,0 +1,28 @@
+<button (click)="onCreate()">Create</button>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Code</th>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Active</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (d of data; track d.id) {
+    <tr>
+      <td>{{ d.id }}</td>
+      <td>{{ d.routeCode }}</td>
+      <td>{{ d.origin }}</td>
+      <td>{{ d.destination }}</td>
+      <td>{{ d.isActive }}</td>
+      <td>
+        <button (click)="onView(d.id)">Details</button>, 
+        <button (click)="onEdit(d.id)">Edit</button>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>

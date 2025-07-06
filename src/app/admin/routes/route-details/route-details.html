@@ -1,0 +1,15 @@
+@if (isLoading) {
+  <p>Fetching details...</p>
+}
+<h1>Details</h1>
+@if (doc) {
+  <ul>
+    <li>ID: {{ doc.id }}</li>
+    <li>Code: {{ doc.routeCode }}</li>
+    <li>Origin: {{ doc.origin }}</li>
+    <li>Destination: {{ doc.destination }}</li>
+    <li>Active: {{ doc.isActive }}</li>
+    <li>Created At: {{ doc.createdAt }}</li>
+    <li>Updated At: {{ doc.updatedAt }}</li>
+  </ul>
+}
